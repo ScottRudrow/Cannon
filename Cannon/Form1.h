@@ -99,7 +99,7 @@ namespace CppCLRWinFormsProject {
 			this->tableLayoutPanel1->Controls->Add(this->button1, 0, 0);
 			this->tableLayoutPanel1->Controls->Add(this->button3, 0, 2);
 			this->tableLayoutPanel1->Controls->Add(this->button2, 0, 1);
-			this->tableLayoutPanel1->Location = System::Drawing::Point(496, 391);
+			this->tableLayoutPanel1->Location = System::Drawing::Point(459, 364);
 			this->tableLayoutPanel1->Name = L"tableLayoutPanel1";
 			this->tableLayoutPanel1->RowCount = 3;
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
@@ -116,6 +116,7 @@ namespace CppCLRWinFormsProject {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"PLAY";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &Form1::Button1);
 			// 
 			// button3
 			// 
@@ -135,6 +136,7 @@ namespace CppCLRWinFormsProject {
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"OPTIONS";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &Form1::buttin2);
 			// 
 			// Form1
 			// 
@@ -156,5 +158,9 @@ namespace CppCLRWinFormsProject {
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+	private: System::Void Button1(System::Object^ sender, System::EventArgs^ e) {
+}
+	private: System::Void buttin2(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
