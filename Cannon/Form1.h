@@ -34,6 +34,13 @@ namespace CppCLRWinFormsProject {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel1;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Button^ button2;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,18 +55,106 @@ namespace CppCLRWinFormsProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->tableLayoutPanel1 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->tableLayoutPanel1->SuspendLayout();
 			this->SuspendLayout();
+			// 
+			// label1
+			// 
+			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 20, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(12, 59);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(320, 55);
+			this->label1->TabIndex = 0;
+			this->label1->Text = L"A Cannon Game";
+			this->label1->Click += gcnew System::EventHandler(this, &Form1::label1_Click);
+			// 
+			// textBox1
+			// 
+			this->textBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 16, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->textBox1->Location = System::Drawing::Point(13, 158);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(1178, 52);
+			this->textBox1->TabIndex = 1;
+			this->textBox1->Text = L"Name";
+			// 
+			// tableLayoutPanel1
+			// 
+			this->tableLayoutPanel1->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->tableLayoutPanel1->ColumnCount = 1;
+			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				100)));
+			this->tableLayoutPanel1->Controls->Add(this->button1, 0, 0);
+			this->tableLayoutPanel1->Controls->Add(this->button3, 0, 2);
+			this->tableLayoutPanel1->Controls->Add(this->button2, 0, 1);
+			this->tableLayoutPanel1->Location = System::Drawing::Point(496, 391);
+			this->tableLayoutPanel1->Name = L"tableLayoutPanel1";
+			this->tableLayoutPanel1->RowCount = 3;
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
+			this->tableLayoutPanel1->Size = System::Drawing::Size(271, 230);
+			this->tableLayoutPanel1->TabIndex = 2;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(3, 3);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(265, 70);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"PLAY";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(3, 155);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(265, 72);
+			this->button3->TabIndex = 2;
+			this->button3->Text = L"EXIT";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &Form1::button3_Click);
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(3, 79);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(265, 70);
+			this->button2->TabIndex = 1;
+			this->button2->Text = L"OPTIONS";
+			this->button2->UseVisualStyleBackColor = true;
 			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(835, 652);
+			this->ClientSize = System::Drawing::Size(1203, 761);
+			this->Controls->Add(this->tableLayoutPanel1);
+			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->label1);
 			this->Name = L"Form1";
-			this->Text = L"Form1";
+			this->Text = L"A Cannon Gamne";
+			this->tableLayoutPanel1->ResumeLayout(false);
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
-	};
+	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
