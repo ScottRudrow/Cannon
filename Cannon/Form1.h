@@ -157,6 +157,7 @@ namespace CppCLRWinFormsProject {
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
 	}
 	private: System::Void Button1(System::Object^ sender, System::EventArgs^ e) {
 }
