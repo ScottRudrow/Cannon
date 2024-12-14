@@ -74,16 +74,16 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\ESD\SDL-release-2.30.10\include;C:\ESD\SDL-release-2.30.10\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\ESD\SDL-release-2.30.10\VisualC\x64\Debug;C:\ESD\SDL2-2.30.10-win32-x64;C:\ESD\SDL2-2.30.10-win32-x64;$(LibraryPath)</LibraryPath>
-    <PublicIncludeDirectories>C:\ESD\SDL-release-2.30.10\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
-    <ExecutablePath>C:\ESD\SDL-release-2.30.10\include;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10\include;C:\ESD\SDL-release-2.30.10\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10\VisualC\x64\Debug;C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10;C:\ESD\SDL2-2.30.10-win32-x64;$(LibraryPath)</LibraryPath>
+    <PublicIncludeDirectories>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+    <ExecutablePath>C:\ASE_Cannon\Cannon Game 1_01\Cannon;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\ESD\SDL-release-2.30.10\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>C:\ESD\SDL-release-2.30.10\VisualC\x64\Debug;C:\ESD\SDL2-2.30.10-win32-x64;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
-    <PublicIncludeDirectories>C:\ESD\SDL-release-2.30.10\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
-    <ExecutablePath>C:\ESD\SDL-release-2.30.10\include;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10\VisualC\x64\Debug;C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <PublicIncludeDirectories>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+    <ExecutablePath>C:\ASE_Cannon\Cannon Game 1_01\Cannon;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
