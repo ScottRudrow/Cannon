@@ -1,7 +1,8 @@
 #pragma once
 
-namespace CppCLRWinFormsProject {
+	using namespace System::CppCLRWinFormsProject; {
 
+};
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -38,15 +39,15 @@ namespace CppCLRWinFormsProject {
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel1;
 	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ button3;
 	protected:
 
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -136,7 +137,6 @@ namespace CppCLRWinFormsProject {
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"OPTIONS";
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &Form1::buttin2);
 			// 
 			// Form1
 			// 
@@ -147,7 +147,7 @@ namespace CppCLRWinFormsProject {
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
 			this->Name = L"Form1";
-			this->Text = L"A Cannon Gamne";
+			this->Text = L"A Cannon Game";
 			this->tableLayoutPanel1->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -161,7 +161,7 @@ namespace CppCLRWinFormsProject {
 	}
 	private: System::Void Button1(System::Object^ sender, System::EventArgs^ e) {
 }
-	private: System::Void buttin2(System::Object^ sender, System::EventArgs^ e) {
-}
+	private: System::Void button2(System::Object^ sender, System::EventArgs^ e) {
+		
+	};
 };
-}
