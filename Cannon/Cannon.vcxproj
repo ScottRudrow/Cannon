@@ -74,15 +74,15 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10\include;C:\ESD\SDL-release-2.30.10\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10\VisualC\x64\Debug;C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10;C:\ESD\SDL2-2.30.10-win32-x64;$(LibraryPath)</LibraryPath>
-    <PublicIncludeDirectories>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+    <IncludePath>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2_30_10\VisualC\x64\Debug;C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2_30_10\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2_30_10\lib\x64;$(LibraryPath)</LibraryPath>
+    <PublicIncludeDirectories>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2_30_10\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
     <ExecutablePath>C:\ASE_Cannon\Cannon Game 1_01\Cannon;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10\VisualC\x64\Debug;C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
-    <PublicIncludeDirectories>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+    <IncludePath>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2_30_10\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2_30_10\lib\x64;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(LibraryPath)</LibraryPath>
+    <PublicIncludeDirectories>C:\ASE_Cannon\Cannon Game 1_01\Cannon\Cannon\x64;C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2_30_10\VisualC\x64\Debug;C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2_30_10\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
     <ExecutablePath>C:\ASE_Cannon\Cannon Game 1_01\Cannon;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -91,11 +91,13 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;Shell32.Lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EntryPointSymbol>main</EntryPointSymbol>
       <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2_30_10\VisualC\x64\Debug;C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2_30_10\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -130,9 +132,10 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ASE_Cannon\Cannon Game 1_01\SDL-release-2.30.10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;Shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EntryPointSymbol>main</EntryPointSymbol>
       <SubSystem>Windows</SubSystem>
     </Link>
@@ -144,13 +147,17 @@
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Form2.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
-    <ClCompile Include="CppCLR_WinFormsProject.cpp" />
+    <ClCompile Include="CG.cpp" />
     <ClCompile Include="Form1.cpp" />
+    <ClCompile Include="Form2.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -171,6 +178,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
